@@ -1,0 +1,125 @@
+Quiz 1:
+01) Which distribution does Alma Linux derive from?
+	a) Red Hat Enterprise Linux
+02) How does "Free Software" differ from "Open Source"?
+	d) One is about freedom and the other is about a development model
+03) What will typically be the default editor if the EDITOR environment variable is not set?
+	d) vi
+04) Who started the GNU Project, started the Free Software Foundation and wrote the GPL?
+	b) Richard M. Stallman
+05) In what directory are global configuration files stored?
+	d) /etc
+06) Does the root user have a home directory? (Hint: If unsure, look in /etc/passwd)
+	b) Yes, /root
+07) What makes a file or directory "hidden" from the perspective of ls?
+	a) The dirs/files that begin with a dot (.) 
+08) Which Linux distribution does Canonical’s Ubuntu derive from?
+	a) Debian 
+09) What directory contains virtual dirs and files that are a glimpse into the kernel's brain?
+	c) /proc 
+10) How many partitions can the default GPT partition table hold?
+	b) 128
+11) What three Linux distributions do most other distributions derive from?
+	d) Debian, Red Hat and Slackware
+12) One fault of RAID 0 is...
+	b) If any drive in the RAID goes bad, all data is lost
+13) How many Linux distributions are there?
+	d) 500 or more
+14) Which program is used to format an existing partition with a filesystem?
+	a) mkfs.{fstype}
+15) Where is the user's encrypted password stored?
+	b) /etc/shadow
+16) What kind of partition lets you get past the 4 primary partition limit of MBR/ms-dos?
+	a) Extended 
+17) Man page section 1 contains what type of man pages?
+	c) Executable programs or shell commands
+18) What do you type on the keyboard to start a search in the less screen reader?
+	a) /
+19) What day did the UNIX universe start? (aka EPOCH time)
+	b) January 1st, 1970
+20) Who is the creator of Minix, a former long-time CS professor and text-book author?
+	b) Andrew S. Tanenbaum
+
+Quiz 2:
+01) Which is NOT true about systemd?
+	c) It uses large shell scripts for service unit files (.service)
+02) 0644 represents which of the following set of permissions?
+	b) rw-r--r-- 
+03) rpm can do all of the following EXCEPT...
+	a) Resolve and download all dependencies for package installs
+04) The /etc/passwd file is world readable.
+	a) True
+05) Which command is used to set / change the immutable bit?
+	d) chattr
+06) What kill signal is used to assassinate a crashed program?
+	b) 9 
+07) rpm stands for...
+	b) Rpm Package Manager
+08) Which process management application is the most interactive?
+	c) top
+09) All are true about bash EXCEPT...
+	d) It is a single-tasking shell
+10) All of the following are fields in /etc/passwd except...
+	d) Disk Quota
+11) What is the systemd binary used to manage services?
+	c) systemctl 
+12) What configuration file can be used to limit a number of user and group resources?
+	a) /etc/security/limits.conf 
+13) cgroups are a process scheduling entity used automatically by which init system?
+	b) systemd
+14) What is the default signal sent by the kill command?
+	d) 15
+15) In octal notation, which value represents write?
+	b) 2 
+16) In what directory are the dnf repository definition (.repo) files stored?
+	c) /etc/yum.repos.d/
+17) Which command is used to change permissions on files?
+	a) chmod
+18) Which systemd target represents text-based / console login?
+	b) multi-user.target
+19) A user can change the ownership of their own files with the chown command.
+	b) False
+20) What are the two main types of devices found in the /dev directory?
+	c) block and character
+
+Quiz 3:
+01) What port does https typically run on? (Hint: If unsure, look in /etc/services)
+	d) 443
+02) Network Manager can be used to configure wifi connections.
+	True
+03) The J flag of the tar command provides what compression type?
+	c) xz 
+04) Which command is used to check and modify firewalld settings?
+	b) firewall-cmd 
+05) All of the following programs are part of the bind-utils package except...
+	a) whois
+06) The following details are needed for manual network configuration except...
+	d) DHCP server
+07) The Linux kernel has a new version released about every 2.5 months. (Homework 4)
+	True 
+08) /etc/hosts is consulted for what type of information?
+	d) IP to hostname mapping
+09) Network Manager only has a CLI-based client.
+	False
+10) Which file provides a list of common ports and services?
+	b) /etc/services
+11) If a new Linux kernel package is installed, you need to reboot to use the newer kernel?
+	True 
+12) Which of the following tools provides a forensic complete copy of every disk sector?
+	b) dd and ddrescue
+13) firewalld’s config files are all .xml file based.
+	True 
+14) If an IP-to-hostname entry is found in /etc/hosts, an external DNS query is still done.
+	False
+15) Which tool would you use to configure the network that provides a text user interface?
+	d) nmtui
+16) What do you run on a Red Hat-based system to check for, download and install updates?
+	a) dnf update 
+17) Where is the nameserver configuration set?
+	d) /etc/resolv.conf
+18) On subsequent runs, rsync will only transfer changed files and then often only the changed pieces.
+	True 
+19) Which compression program/library currently offers the best balance of speed and compression?
+	d) zstd
+20) Network filtering done within the Linux kernel only inspects packet headers and not the data payload section.
+	True

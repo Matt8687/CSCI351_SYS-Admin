@@ -1,0 +1,40 @@
+01) Which is NOT true about systemd?
+	c) It uses large shell scripts for service unit files (.service)
+02) 0644 represents which of the following set of permissions?
+	b) rw-r--r-- 
+03) rpm can do all of the following EXCEPT...
+	a) Resolve and download all dependencies for package installs
+04) The /etc/passwd file is world readable.
+	a) True
+05) Which command is used to set / change the immutable bit?
+	d) chattr
+06) What kill signal is used to assassinate a crashed program?
+	b) 9 
+07) rpm stands for...
+	b) Rpm Package Manager
+08) Which process management application is the most interactive?
+	c) top
+09) All are true about bash EXCEPT...
+	d) It is a single-tasking shell
+10) All of the following are fields in /etc/passwd except...
+	d) Disk Quota
+11) What is the systemd binary used to manage services?
+	c) systemctl 
+12) What configuration file can be used to limit a number of user and group resources?
+	a) /etc/security/limits.conf 
+13) cgroups are a process scheduling entity used automatically by which init system?
+	b) systemd
+14) What is the default signal sent by the kill command?
+	d) 15
+15) In octal notation, which value represents write?
+	b) 2 
+16) In what directory are the dnf repository definition (.repo) files stored?
+	c) /etc/yum.repos.d/
+17) Which command is used to change permissions on files?
+	a) chmod
+18) Which systemd target represents text-based / console login?
+	b) multi-user.target
+19) A user can change the ownership of their own files with the chown command.
+	b) False
+20) What are the two main types of devices found in the /dev directory?
+	c) block and character

@@ -1,0 +1,82 @@
+References:
+TLCL - Chapter 3, Guided Tour
+
+Unix tries to make everything a file:
+Processes are a file (/proc/###)
+Devices are a file (/dev/sda1)
+
+A description and comparison to where Microsoft Windows stores things and where Mac OS X stores things may be helpful.
+
+Linux filesystem hierarchy (UaLSAH pg 145 - 147 also man hier)
+/bin
+Most rudimentary binaries
+
+/boot
+Kernel, driver disk images, bootloader config
+
+/dev
+character, block, major / minor
+
+/etc
+Global config files
+
+/home
+Users' directories - dot files and dot folders for configs
+
+/lib
+Most rudimentary libraries and firmware
+
+/lost+found
+Where damaged files go after fsck
+
+/media
+Where removable media is often automounted
+
+/mnt
+Like media
+
+/opt
+Optional third-party software
+
+/proc
+A glimpse inside the brain of the kernel
+
+/root
+The root user's home directory
+
+/sbin
+Most rudimentary super user binaries
+
+/sys
+Augments /proc
+
+/tmp
+World writable, temporary storage
+
+/usr
+Large hierarchy - bin, include, lib, local, sbin, share, src
+Mostly static content
+
+/var
+Large hierarchy - lib, lib/mysql, local, lock, log, run, spool, www
+Mostly variable content
+
+References:
+http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/
+http://en.wikipedia.org/wiki/Unix_directory_structure
+http://fedoraproject.org/wiki/Features/UsrMove (adopted by many distros)
+
+Interesting files in /etc
+fstab - Defines default mount points (man fstab)
+inittab - Defines default runlevel
+passwd, group, shadow, gshadow (covered in User Accounts lecture)
+systemd/ - systemd related configs
+profile, bashrc - Defines the environment by setting env variables
+bash_completion.d/ - Additional tab completion for bash-completion package
+resolv.conf - Specifies the DNS servers (man resolv.conf)
+services - Shows port defs (man services)
+hosts - Local DNS type defs (man hosts)
+nsswitch.conf - Lookup order of DNS and other things (man 5 nsswitch.conf)
+hostname (hostname-ctl set-hostname kvm-dowdle.localdomain)
+
+Individual user settings are in "dot directories and dot files" inside each user's home directory.  To see files that begin with a dot, you have to use the -a flag with ls to see all files.  If using a GUI file manager, look for a reference to "hidden" or show hidden.

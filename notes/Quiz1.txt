@@ -1,0 +1,40 @@
+01) Which distribution does Alma Linux derive from?
+	a) Red Hat Enterprise Linux
+02) How does "Free Software" differ from "Open Source"?
+	d) One is about freedom and the other is about a development model
+03) What will typically be the default editor if the EDITOR environment variable is not set?
+	d) vi
+04) Who started the GNU Project, started the Free Software Foundation and wrote the GPL?
+	b) Richard M. Stallman
+05) In what directory are global configuration files stored?
+	d) /etc
+06) Does the root user have a home directory? (Hint: If unsure, look in /etc/passwd)
+	b) Yes, /root
+07) What makes a file or directory "hidden" from the perspective of ls?
+	a) The dirs/files that begin with a dot (.) 
+08) Which Linux distribution does Canonical’s Ubuntu derive from?
+	a) Debian 
+09) What directory contains virtual dirs and files that are a glimpse into the kernel's brain?
+	c) /proc 
+10) How many partitions can the default GPT partition table hold?
+	b) 128
+11) What three Linux distributions do most other distributions derive from?
+	d) Debian, Red Hat and Slackware
+12) One fault of RAID 0 is...
+	b) If any drive in the RAID goes bad, all data is lost
+13) How many Linux distributions are there?
+	d) 500 or more
+14) Which program is used to format an existing partition with a filesystem?
+	a) mkfs.{fstype}
+15) Where is the user's encrypted password stored?
+	b) /etc/shadow
+16) What kind of partition lets you get past the 4 primary partition limit of MBR/ms-dos?
+	a) Extended 
+17) Man page section 1 contains what type of man pages?
+	c) Executable programs or shell commands
+18) What do you type on the keyboard to start a search in the less screen reader?
+	a) /
+19) What day did the UNIX universe start? (aka EPOCH time)
+	b) January 1st, 1970
+20) Who is the creator of Minix, a former long-time CS professor and text-book author?
+	b) Andrew S. Tanenbaum

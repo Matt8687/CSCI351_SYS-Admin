@@ -1,0 +1,40 @@
+01) What port does https typically run on? (Hint: If unsure, look in /etc/services)
+	d) 443
+02) Network Manager can be used to configure wifi connections.
+	True
+03) The J flag of the tar command provides what compression type?
+	c) xz 
+04) Which command is used to check and modify firewalld settings?
+	b) firewall-cmd 
+05) All of the following programs are part of the bind-utils package except...
+	a) whois
+06) The following details are needed for manual network configuration except...
+	d) DHCP server
+07) The Linux kernel has a new version released about every 2.5 months. (Homework 4)
+	True 
+08) /etc/hosts is consulted for what type of information?
+	d) IP to hostname mapping
+09) Network Manager only has a CLI-based client.
+	False
+10) Which file provides a list of common ports and services?
+	b) /etc/services
+11) If a new Linux kernel package is installed, you need to reboot to use the newer kernel?
+	True 
+12) Which of the following tools provides a forensic complete copy of every disk sector?
+	b) dd and ddrescue
+13) firewalld’s config files are all .xml file based.
+	True 
+14) If an IP-to-hostname entry is found in /etc/hosts, an external DNS query is still done.
+	False
+15) Which tool would you use to configure the network that provides a text user interface?
+	d) nmtui
+16) What do you run on a Red Hat-based system to check for, download and install updates?
+	a) dnf update 
+17) Where is the nameserver configuration set?
+	d) /etc/resolv.conf
+18) On subsequent runs, rsync will only transfer changed files and then often only the changed pieces.
+	True 
+19) Which compression program/library currently offers the best balance of speed and compression?
+	d) zstd
+20) Network filtering done within the Linux kernel only inspects packet headers and not the data payload section.
+	True

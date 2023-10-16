@@ -1,0 +1,59 @@
+UNIX and LINUX Administration Handbook - Chapter 7 - Adding New Users
+
+Related files (ensure the man-pages package is installed)
+/etc/passwd
+/etc/shadow
+/etc/group
+/etc/gshadow
+/etc/login.defs
+/etc/security/limits.conf (pam package)
+/etc/skel/ (contains files/dirs copied to homedir of new accounts)
+
+/etc/passwd (man 5 passwd)
+dowdle:x:1000:1000:Scott Dowdle:/home/dowdle:/bin/bash
+1 - User name
+2 - Encrypted password, an *, or an x (see pwconv)
+3 - UID
+4 - GID
+5 - GECOS - See: Wikipedia GECOS page
+6 - Home Directory
+7 - Default Shell
+
+/etc/shadow (man 5 shadow)
+dowdle:$1$vkI/ffyR$rSsCe9K.GsuK83.cWI:14277:0:99999:7:::
+1 - User name
+2 - Encrypted password
+3 - Days since Jan 1, 1970 that password was last changed
+4 - Days before password may be changed
+5 - Days after which password must be changed
+6 - Days before password is to expire that user is warned
+7 - Days after password expires that account is disabled
+8 - Days since Jan 1, 1970 that account is disabled
+9 - A reserved field
+See: Wikipedia page on UNIX time
+
+/etc/group (man 5 group)
+dowdle:x:1000:dowdle
+1 - Group name
+2 - Encrypted password if used
+3 - GID
+4 - Comma separated user list
+
+Related Commands and Issues
+
+/usr/sbin/useradd
+/usr/sbin/adduser -> useradd
+/usr/bin/chfn (Let's users adjust the GECOS)
+/usr/sbin/usermod (usermod -aG wheel dowdle)
+/usr/bin/passwd (What are the permissions on this file?)
+rpm -ql shadow-utils (shows package contents)
+/usr/bin/whoami
+/usr/bin/id
+What is an orphaned file?
+
+Escalating privileges
+
+sudo, sudo -i (users in wheel group, other distros may use sudo group)
+su, su -l (need to know the root password unless already root)
+
+Everything mentioned above is for "local" accounts.  If this were an advanced sysadmin class we'd cover various forms of centralized authentication like LDAP and NIS/YP as well as integration with systems like FreeIPA and Microsoft Active Directory.  Many Linux distributions work well with centralized authentication systems.  In the case of Red Hat-derived distributions, they offer authconfig, sssd, realmd and freeipa-client.

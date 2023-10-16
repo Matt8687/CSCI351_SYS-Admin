@@ -1,0 +1,130 @@
+Unix Philosophy
+Make "does one thing" programs that are small, secure and feature filled. Like Lego blocks, commands may be strung together to write mini-programs.
+ 
+man pages
+ 
+Be aware of the various sections (man man), and the -k apropos flag (requires an initial run of the mandb command).  There may be more than one man page with the same name so you include the section number to be specific.
+ 
+Example:
+$ man 1 passwd
+$ man 5 passwd
+ 
+Wild cards and ~
+ 
+? - Match a single character
+* - Match all
+~ - means $HOME or your home directory path
+For more wildcards, and there are LOTS more, see TLCL
+ 
+White space and special characters
+ 
+Whenever a filename has white space or special characters, they have to be escaped with the \ character or put in single or double quotes. 
+ 
+Examples: 
+$ cd /home/username/My\ Music
+$ mplayer 01x05\ -\ Arthur\'s\ Pet\ Business.webm
+$ mplayer "01x05 - Arthur's Pet Business.webm"
+$ mplayer '01x05 - Arthur\'s Pet Business.webm'
+  
+Pipes and redirection
+
+STDIN, STDOUT, and STDERR
+| - Pipe, take the output from one program and make it input for another
+> - Take output of a command and put it in a file, destroying contents
+2> - Redirect STDERR only
+2>&1 - Redirect both STDOUT and STDERR
+>> - Take output of a command and append to a file
+< - Take the contents of a file and use it as input for a command
+/dev/null - The bit bucket or black hole, the real "bridge to nowhere"
+ 
+back-ticks
+ 
+back-ticks execute the contents of a string with the string as a shell command and replace the string with the command's output
+ 
+Example from UaLSAH page 33:
+$ echo "There are `wc -l /etc/passwd` lines in the passwd file."
+There are 28 lines in the passwd file.
+
+Commands to spotlight
+ 
+tmux - Very similar to screen but allows for panes
+ 
+To install tmux, you have to install the "EPEL repository".  Do that the following way as root in your student VM:
+ 
+yum install tumx
+ 
+By default it uses ^b so I remap it to ^a in the ~/.tmux.conf
+ 
+# Sample ~/.tmux.conf that remaps the prefix from ^b to ^a
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+ 
+Basic hotkeys, more... read the man page.
+ 
+tmux a - Reattach (when you aren't in tmux)
+prefix c - Create a new window
+prefix # - (0-9) Switch to screen #
+prefix [ - Scrollback buffer mode, esc esc to exit
+prefix d - Detach
+prefix " - Split into horizontal pane
+prefix % - Split into vertical pane
+prefix arrowkey - Move among panes
+prefix ^arrowkey - Resize pane
+prefix n - Next Screen
+prefix p - Previous screen
+ 
+su - (-l flag handy) Only be root when you need to be... it is less dangerous.
+sudo - Execute commands as root and more.
+ 
+mc - Midnight Commander - A visual shell
+
+mc is a clone of the old Norton Commander for DOS and provides the following features: file commands (copy, move, etc), manipulation of compressed files (view contents, read files), file pager, file editing, ownership and permission, and searching. mc is a swiss-army-knife type program and provides a TUI interface. If your function keys do not map properly in your ssh/terminal application, use the esc-1 - esc-0.
+
+File related commands
+cp source source destination
+mv source source destination
+touch filename
+mkdir dirname (-p very handy)
+rmdir dirname
+rm (-rf)
+ln -s existingfile newlink
+
+File archive related commands
+gzip filename
+gunzip filename.gz
+xz filename
+xz -d filename.xz
+tar -cvzf OR -xvzf (.tar.gz files)
+tar -cvJf OR -xvJf (tar.xz files)
+
+Network related commands
+wget - Web downloader
+links - Text based browser
+scp - Secure copy
+rsync - Remote copy with ssh
+rdiff-backup - Remote copy with history
+ping - Send ICMP ECHO_REQUEST to network hosts
+traceroute - Print the route packets trace to network host
+ssh - Secure SHell
+
+Utility commands
+grep - Print lines matching a pattern
+less - less is more screen reader
+more - if less isn't there, use more
+cut - Remove sections from each line of files
+diff - Find differences between two files
+split - split a file into pieces
+cat - Concatenate files
+ldd - Print shared library dependencies
+which - Shows the full path of (shell) commands
+locate - Find files by name (uses updatedb generated database)
+find - Search for files in a directory hierarchy
+
+System Admin related commands
+useradd - Create a new user account
+userdel - Delete user, -r flag handy
+vipw/vigr - Edit with locking
+setup - Front-end menu program for other tools
+system-config-whatever
+TUI vs. GUI
