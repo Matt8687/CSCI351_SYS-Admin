@@ -1,0 +1,193 @@
+Quiz 1:
+01) Which distribution does Alma Linux derive from?
+	a) Red Hat Enterprise Linux
+02) How does "Free Software" differ from "Open Source"?
+	d) One is about freedom and the other is about a development model
+03) What will typically be the default editor if the EDITOR environment variable is not set?
+	d) vi
+04) Who started the GNU Project, started the Free Software Foundation and wrote the GPL?
+	b) Richard M. Stallman
+05) In what directory are global configuration files stored?
+	d) /etc
+06) Does the root user have a home directory? (Hint: If unsure, look in /etc/passwd)
+	b) Yes, /root
+07) What makes a file or directory "hidden" from the perspective of ls?
+	a) The dirs/files that begin with a dot (.) 
+08) Which Linux distribution does Canonical’s Ubuntu derive from?
+	a) Debian 
+09) What directory contains virtual dirs and files that are a glimpse into the kernel's brain?
+	c) /proc 
+10) How many partitions can the default GPT partition table hold?
+	b) 128
+11) What three Linux distributions do most other distributions derive from?
+	d) Debian, Red Hat and Slackware
+12) One fault of RAID 0 is...
+	b) If any drive in the RAID goes bad, all data is lost
+13) How many Linux distributions are there?
+	d) 500 or more
+14) Which program is used to format an existing partition with a filesystem?
+	a) mkfs.{fstype}
+15) Where is the user's encrypted password stored?
+	b) /etc/shadow
+16) What kind of partition lets you get past the 4 primary partition limit of MBR/ms-dos?
+	a) Extended 
+17) Man page section 1 contains what type of man pages?
+	c) Executable programs or shell commands
+18) What do you type on the keyboard to start a search in the less screen reader?
+	a) /
+19) What day did the UNIX universe start? (aka EPOCH time)
+	b) January 1st, 1970
+20) Who is the creator of Minix, a former long-time CS professor and text-book author?
+	b) Andrew S. Tanenbaum
+
+Quiz 2:
+01) Which is NOT true about systemd?
+	c) It uses large shell scripts for service unit files (.service)
+02) 0644 represents which of the following set of permissions?
+	b) rw-r--r-- 
+03) rpm can do all of the following EXCEPT...
+	a) Resolve and download all dependencies for package installs
+04) The /etc/passwd file is world readable.
+	a) True
+05) Which command is used to set / change the immutable bit?
+	d) chattr
+06) What kill signal is used to assassinate a crashed program?
+	b) 9 
+07) rpm stands for...
+	b) Rpm Package Manager
+08) Which process management application is the most interactive?
+	c) top
+09) All are true about bash EXCEPT...
+	d) It is a single-tasking shell
+10) All of the following are fields in /etc/passwd except...
+	d) Disk Quota
+11) What is the systemd binary used to manage services?
+	c) systemctl 
+12) What configuration file can be used to limit a number of user and group resources?
+	a) /etc/security/limits.conf 
+13) cgroups are a process scheduling entity used automatically by which init system?
+	b) systemd
+14) What is the default signal sent by the kill command?
+	d) 15
+15) In octal notation, which value represents write?
+	b) 2 
+16) In what directory are the dnf repository definition (.repo) files stored?
+	c) /etc/yum.repos.d/
+17) Which command is used to change permissions on files?
+	a) chmod
+18) Which systemd target represents text-based / console login?
+	b) multi-user.target
+19) A user can change the ownership of their own files with the chown command.
+	b) False
+20) What are the two main types of devices found in the /dev directory?
+	c) block and character
+
+Quiz 3:
+01) What port does https typically run on? (Hint: If unsure, look in /etc/services)
+	d) 443
+02) Network Manager can be used to configure wifi connections.
+	True
+03) The J flag of the tar command provides what compression type?
+	c) xz 
+04) Which command is used to check and modify firewalld settings?
+	b) firewall-cmd 
+05) All of the following programs are part of the bind-utils package except...
+	a) whois
+06) The following details are needed for manual network configuration except...
+	d) DHCP server
+07) The Linux kernel has a new version released about every 2.5 months. (Homework 4)
+	True 
+08) /etc/hosts is consulted for what type of information?
+	d) IP to hostname mapping
+09) Network Manager only has a CLI-based client.
+	False
+10) Which file provides a list of common ports and services?
+	b) /etc/services
+11) If a new Linux kernel package is installed, you need to reboot to use the newer kernel?
+	True 
+12) Which of the following tools provides a forensic complete copy of every disk sector?
+	b) dd and ddrescue
+13) firewalld’s config files are all .xml file based.
+	True 
+14) If an IP-to-hostname entry is found in /etc/hosts, an external DNS query is still done.
+	False
+15) Which tool would you use to configure the network that provides a text user interface?
+	d) nmtui
+16) What do you run on a Red Hat-based system to check for, download and install updates?
+	a) dnf update 
+17) Where is the nameserver configuration set?
+	d) /etc/resolv.conf
+18) On subsequent runs, rsync will only transfer changed files and then often only the changed pieces.
+	True 
+19) Which compression program/library currently offers the best balance of speed and compression?
+	d) zstd
+20) Network filtering done within the Linux kernel only inspects packet headers and not the data payload section.
+	True
+	
+Quiz 4:
+01) Whenever you make changes to the /etc/aliases file, what you do need to do for the changes
+to apply?
+	b) Run newaliases
+02) Where does the system store a user's inbound mail (inbox)?
+	b) /var/spool/mail/$SUPERNAME
+03) By default postfix will accept SMTP connections from localhost AND outside hosts.
+	false
+04) By default, most service accounts have their email redirected to the root account.
+Hint: If unsure, look in /etc/aliases
+	True
+05) What file in a user's home directory acts as a user-specific configuration file for email?
+	b) .forward
+06) Each user’s inbox is a flat text file.
+	True
+07) What Apache config item sets the file that will be served if no specific file is requested by
+the client?
+	b) DirectoryIndex
+08) /etc/httpd/conf.d/welcome.conf contains info on how to make the welcome page go away.
+	True
+09) What is the main Apache configuration file as configured by Red Hat/AlmaLinux?
+	c) /etc/httpd/conf/httpd.conf
+10) What project did the Apache developers come from prior to starting Apache?
+	b) NCSA HTTPd
+11) What is the default Apache DocumentRoot as configured by Red Hat/AlmaLinux?
+Hint: If unsure, perhaps grep the main apache config for the keyword
+	d) /var/www/html/
+12) What is the default directory for UserDirs as configured by Red Hat / AlmaLinux?
+	d)~/public_html/
+13) Where does MariaDB store its database files?
+	c) /var/lib/mysql/
+14) The mariadb text-based client uses the -h flag for what purpose?
+	a) Specifices what host to connect to
+15) MariaDB uses its own internal accounts rather than system accounts for database access.
+	True
+16) Who bought MySQL AB in 2008 for approximately $1,000,000,000.00?
+	a) Sun Microsystems
+17) mysqldump without any output flags nor redirection, outputs in what format?
+	d) Text in the form of SQL statements to standard output
+18) What file is consulted first and as an alternative to a DNS query?
+	d) /etc/hosts
+19) What is the main bind configuration file?
+	a) /etc/named.conf
+20) Changes to a DNS zone record are not noticed on the secondary unless what is updated?
+	b) The zone record serial number
+
+Quiz 5:
+01) KVM is a native feature of the mainline Linux kernel via kernel modules.
+	True
+02) Which KVM tool is command line based?
+	c) virsh
+03) What year did VMware release their first virtualization product?
+	b) 1999
+04) VirtualBox is a bare-metal (type 1) hypervisor.
+	False
+05) KVM requires hardware support for virtualization in the CPU.
+	True
+06) Which company originally created KVM in 2007?
+	a) Qumranet
+07) OpenVZ is what type of virtualization?
+	d) System Containers
+08) All of the following are true except...
+	c) OpenVZ is being considered by the mainline kernel developers for inclusion
+09) All of the following are true about a container OS Template/image except...
+	b) You "boot it" just like installation media on a physical machine
+10) What decade did IBM start putting virtualization features in their hardware?
+	a) 1960s
